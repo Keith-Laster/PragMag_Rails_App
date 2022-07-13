@@ -4,7 +4,7 @@
 <% @movies.each do |m| %>
    <li> 
    <strong><%= m.title %></strong> (<%= m.rating %>):
-   <%= total_gross(m) %>
+   <%= total_grossy(m) %>
    </li>
    <p>
    <%= truncate(m.description, length: 40, seperator: '') %>

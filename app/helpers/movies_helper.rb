@@ -1,13 +1,13 @@
 module MoviesHelper
-  def total_gross(movie)
-    if movie.flop?
+  def total_grossy(m)
+    if m.flop?
       'Flop!'
     else
-      number_to_currency(movie.total_gross, precision: 0)
+      number_to_currency(m.total_gross, precision: 0)
     end
   end
 
-  def year_of(movie)
-    movie.released_on.strftime('%Y')
+  def year_of(m)
+    m.released_on.strftime('%Y')
   end
 end
