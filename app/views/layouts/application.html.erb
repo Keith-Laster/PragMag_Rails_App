@@ -11,6 +11,21 @@
   </head>
 
   <body>
+
+    <header>
+    <h1>Flix</h1>
+    </header>
+
+    <div class ="content">
     <%= yield %>
+    </div>
+
+    <footer>
+    <p>
+    Copyright &copy; 2005-<%= Time.now.year %>
+    <%= link_to 'The Flixasourus Enterprises', 'http://localhost:3000/movies' %> 
+    </p>
+    </footer>
+
   </body>
 </html>

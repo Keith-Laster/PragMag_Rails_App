@@ -8,8 +8,7 @@ module MoviesHelper
   end
 
   def year_of(m)
-    puts m
-    puts 'tessssst'
+    # m.released_on.year
     # if !m.released_on.nil?
     #   m.released_on.strftime('%Y')
     # else
