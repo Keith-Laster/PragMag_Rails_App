@@ -1,16 +1,15 @@
-<h1>Movies</h1>
-
-<ul>
-<% @movies.each do |m| %>
-   <li> 
-   <strong><%= m.title %></strong> (<%= m.rating %>):
-   <%= total_grossy(m) %>
-   </li>
-   <p>
-   <%= truncate(m.description, length: 40, seperator: '') %>
-   </p>
-   <p>
-   <%= year_of(m) %>
-   </p>
-   <% end %>
-</ul>
+<% @movies.each do |movie| %>
+  <section class="movie">
+    <div class="summary">
+      <h2>
+        <%= movie.title %>
+      </h2>
+      <h3>
+        <%= total_grossy(movie) %>
+      </h3>
+      <p>
+        <%= truncate(movie.description, length: 150, separator: ' ') %>
+      </p>
+    </div>
+  </section>
+<% end %>
