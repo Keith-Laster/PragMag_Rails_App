@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :movies do
     resources :reviews
   end
+  resource :session, only: %i[new create destroy]
 
   get 'signup' => 'users#new'
 end
