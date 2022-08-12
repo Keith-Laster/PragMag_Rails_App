@@ -34,6 +34,19 @@
   </div>
 </section>
 
+<aside>
+<% if @fans.present? %>
+    <h4>Fans</h4>
+    <ul>
+      <% @fans.each do |user| %>
+        <li>
+          <%= link_to user.name, user %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</aside>
+
 <% if current_user_admin? %>
 <section class="admin">
     <%= link_to "Edit", edit_movie_path(@movie), class: "button" %>
